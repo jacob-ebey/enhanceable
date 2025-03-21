@@ -11,7 +11,10 @@ const ESCAPE_MAP = {
 };
 
 export class UnsafeHTML {
-	constructor(public value: string) {}
+	public value: string;
+	constructor(value: string) {
+		this.value = value;
+	}
 	toString() {
 		return this.value;
 	}

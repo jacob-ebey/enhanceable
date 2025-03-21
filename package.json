@@ -3,7 +3,11 @@
 	"version": "0.0.1",
 	"type": "module",
 	"description": "",
-	"files": ["dist", "src", "README.md"],
+	"files": [
+		"dist",
+		"src",
+		"README.md"
+	],
 	"types": "./dist/enhanceable.d.ts",
 	"main": "./dist/enhanceable.js",
 	"exports": {
@@ -54,6 +58,7 @@
 		"@biomejs/biome": "^1.9.4",
 		"@cloudflare/vite-plugin": "^0.1.13",
 		"@types/node": "^22.13.10",
+		"mitata": "^1.0.34",
 		"tsup": "^8.4.0",
 		"typescript": "^5.8.2",
 		"vite": "^6.2.2",

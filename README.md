@@ -151,3 +151,7 @@ const element = hydrate(htmlContent);
 
 - `hydrate(html)` - Converts HTML string to DOM elements with enhancements
 - `next(element, selector)` - Finds the next element matching a selector
+
+## Benchmarks
+
+[Benchmarks Here](./bench.txt)
