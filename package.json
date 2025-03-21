@@ -1,8 +1,9 @@
 {
 	"name": "enhanceable",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"type": "module",
 	"description": "",
+	"files": ["dist", "src", "README.md"],
 	"types": "./dist/enhanceable.d.ts",
 	"main": "./dist/enhanceable.js",
 	"exports": {
