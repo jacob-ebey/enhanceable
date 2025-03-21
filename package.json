@@ -1,0 +1,74 @@
+{
+	"name": "enhanceable",
+	"version": "0.0.0",
+	"type": "module",
+	"description": "",
+	"types": "./dist/enhanceable.d.ts",
+	"main": "./dist/enhanceable.js",
+	"exports": {
+		".": {
+			"types": "./dist/enhanceable.d.ts",
+			"source": "./src/enhanceable.ts",
+			"default": "./dist/enhanceable.js"
+		},
+		"./context": {
+			"types": "./dist/context/node.d.ts",
+			"source": {
+				"workerd": "./src/context/node.js",
+				"browser": "./src/context/browser.js",
+				"default": "./src/context/node.js"
+			},
+			"workerd": "./dist/context/node.js",
+			"browser": "./dist/context/browser.js",
+			"default": "./dist/context/node.js"
+		},
+		"./dom": {
+			"types": "./dist/dom.d.ts",
+			"source": "./src/dom.ts",
+			"default": "./dist/dom.js"
+		},
+		"./error": {
+			"types": "./dist/error.d.ts",
+			"source": "./src/error.ts",
+			"default": "./dist/error.js"
+		},
+		"./vite": {
+			"types": "./dist/vite.d.ts",
+			"source": "./src/vite.ts",
+			"default": "./dist/vite.js"
+		}
+	},
+	"scripts": {
+		"build": "tsup",
+		"build:fixture": "vite build",
+		"dev": "vite",
+		"start": "vite preview",
+		"test": "vitest"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.6.4",
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@cloudflare/vite-plugin": "^0.1.13",
+		"@types/node": "^22.13.10",
+		"tsup": "^8.4.0",
+		"typescript": "^5.8.2",
+		"vite": "^6.2.2",
+		"vitest": "^3.0.9"
+	},
+	"peerDependenciesMeta": {
+		"vite": {
+			"optional": true
+		}
+	},
+	"peerDependencies": {
+		"vite": "^6.0.0"
+	},
+	"dependencies": {
+		"@types/estree": "^1.0.6",
+		"estree-walker": "^3.0.3",
+		"magic-string": "~0.30.17"
+	}
+}

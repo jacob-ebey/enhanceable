@@ -1,0 +1,5 @@
+.DS_Store
+.wrangler
+build
+dist
+node_modules
