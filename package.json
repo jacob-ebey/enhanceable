@@ -56,7 +56,8 @@
 		"tsup": "^8.4.0",
 		"typescript": "^5.8.2",
 		"vite": "^6.2.2",
-		"vitest": "^3.0.9"
+		"vitest": "^3.0.9",
+		"wrangler": "^4.3.0"
 	},
 	"peerDependenciesMeta": {
 		"vite": {
