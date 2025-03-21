@@ -1,4 +1,4 @@
-name = "worker-ts"
+name = "enhanceable"
 main = "fixture/worker.ts"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
