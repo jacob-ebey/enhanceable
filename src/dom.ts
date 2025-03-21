@@ -37,26 +37,6 @@ export function hydrate(html: UnsafeHTML): DocumentFragment {
 	return content;
 }
 
-export function closest(from: Element, selector: string): Element | null {
-	// Use native Element.closest() if available (modern browsers)
-	if (from.closest) {
-		return from.closest(selector);
-	}
-
-	// Fallback implementation for older browsers
-	let element: Element | null = from;
-
-	// Walk up the DOM tree until we find a match or reach the document root
-	while (element && element !== document.documentElement) {
-		if (element.matches?.(selector)) {
-			return element;
-		}
-		element = element.parentElement;
-	}
-
-	return null;
-}
-
 export function next(from: Element, selector: string): Element | null {
 	// Start with the next sibling
 	let element = from.nextElementSibling;
