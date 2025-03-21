@@ -3,12 +3,10 @@ import { type Child, html, useEnhancements } from "enhanceable";
 import * as enhancements from "./todo.client.ts";
 
 export function TodoList({ children }: { children: Child }) {
-	const { addTodo } = useEnhancements(enhancements);
+  const { addTodo } = useEnhancements(enhancements);
 
-	return html`
-    <button type="button" ${{ onclick: addTodo }}>
-      Add Todo
-    </button>
+  return html`
+    <button type="button" ${{ onclick: addTodo }}>Add Todo</button>
     <ul>
       ${children}
     </ul>
@@ -16,14 +14,12 @@ export function TodoList({ children }: { children: Child }) {
 }
 
 export function TodoItem({ children }: { children: Child }) {
-	const { deleteTodo } = useEnhancements(enhancements);
+  const { deleteTodo } = useEnhancements(enhancements);
 
-	return html`
+  return html`
     <li>
       ${children}
-      <button type="button" ${{ onclick: deleteTodo }}>
-        Delete
-      </button>
+      <button type="button" ${{ onclick: deleteTodo }}>Delete</button>
     </li>
   `;
 }

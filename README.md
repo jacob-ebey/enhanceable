@@ -30,11 +30,7 @@ Components are simple functions that return HTML using the `html` template liter
 import { html } from "enhanceable";
 
 export function Wrapper({ children }) {
-  return html`
-    <div class="wrapper">
-      ${children}
-    </div>
-  `;
+  return html` <div class="wrapper">${children}</div> `;
 }
 ```
 
@@ -84,7 +80,7 @@ export default {
           <!DOCTYPE html>
           <html lang="en">
             <head>
-              <meta charset="UTF-8">
+              <meta charset="UTF-8" />
               <title>Enhanceable App</title>
             </head>
             <body>
@@ -92,13 +88,13 @@ export default {
               <${Counter} ${{ initialCount: 1 }} />
             </body>
           </html>
-        `
+        `,
       ),
       {
         headers: {
           "content-type": "text/html; charset=utf-8",
         },
-      }
+      },
     );
   },
 };
@@ -118,9 +114,7 @@ import { TodoItem } from "./todo.ts";
 
 export async function addTodo(event: MouseEvent) {
   const list = document.querySelector("ul");
-  const newItem = hydrate(
-    await html`<${TodoItem}>New Item</${TodoItem}>`
-  );
+  const newItem = hydrate(await html`<${TodoItem}>New Item</${TodoItem}>`);
   list.append(newItem);
 }
 ```

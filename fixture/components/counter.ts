@@ -3,13 +3,13 @@ import { html, useEnhancements } from "enhanceable";
 import * as enhancements from "./counter.client.ts";
 
 type CounterProps = {
-	initialCount?: number;
+  initialCount?: number;
 };
 
 export function Counter({ initialCount = 0 }: CounterProps) {
-	const { handleIncrement } = useEnhancements(enhancements);
+  const { handleIncrement } = useEnhancements(enhancements);
 
-	return html`
+  return html`
     <button${{ onclick: handleIncrement }}>${initialCount}</button>
   `;
 }

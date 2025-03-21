@@ -5,10 +5,10 @@ import { TodoItem, TodoList } from "./components/todo.ts";
 import { Wrapper } from "./components/wrapper.ts";
 
 export default {
-	async fetch() {
-		return new Response(
-			await render(
-				() => html`<!DOCTYPE html>
+  async fetch() {
+    return new Response(
+      await render(
+        () => html`<!DOCTYPE html>
     				<html lang="en">
     					<head>
     						<meta charset="UTF-8">
@@ -31,12 +31,12 @@ export default {
     					</body>
     				</html>
     			`,
-			),
-			{
-				headers: {
-					"content-type": "text/html; charset=utf-8",
-				},
-			},
-		);
-	},
+      ),
+      {
+        headers: {
+          "content-type": "text/html; charset=utf-8",
+        },
+      },
+    );
+  },
 };
